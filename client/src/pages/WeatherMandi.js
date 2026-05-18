@@ -11,10 +11,10 @@ const WeatherMandi = () => {
   const navigate = useNavigate();
   const { content } = useContext(LanguageContext);
   
-  // --- PASTE YOUR KEYS HERE ---
-  const OPENWEATHER_KEY = '<OPENWEATHER_KEY>'; 
-  const GOV_API_KEY = '579b464db66ec23bdd00000116567f8684d64375648eab1fde8d7ced'; 
-  const GOV_RESOURCE_ID = '9ef84268-d588-465a-a308-a864a43d0070'; 
+  // --- API KEYS (use environment variables) ---
+  const OPENWEATHER_KEY = process.env.REACT_APP_OPENWEATHER_KEY || ''; 
+  const GOV_API_KEY = process.env.REACT_APP_GOV_API_KEY || ''; 
+  const GOV_RESOURCE_ID = process.env.REACT_APP_GOV_RESOURCE_ID || ''; 
 
   // State
   const [user, setUser] = useState({});
