@@ -1,0 +1,126 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    /* Using your background image */
+    background-image: url('../assets/valley_bg.jpg'); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  /* Dark overlay to ensure the glass card pops */
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Darkening the background slightly */
+    z-index: 1;
+  }
+  
+  /* The Glassmorphism Card */
+  .glassCard {
+    position: relative;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.85); /* Milky white semi-transparent */
+    backdrop-filter: blur(12px); /* The blur effect */
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    width: 450px;
+    max-width: 90%;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+  
+  .logo {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1rem;
+    object-fit: contain;
+  }
+
+  /* ... keep existing .container, .overlay, .glassCard, .logo code ... */
+
+.title {
+  font-family: 'Georgia', serif; /* Matching the serif font in screenshot */
+  font-size: 1.8rem;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+}
+
+.tagline {
+  color: #555;
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+}
+
+.formGroup {
+  text-align: left;
+  margin-bottom: 1.2rem;
+}
+
+.label {
+  display: block;
+  font-size: 0.9rem;
+  color: #333;
+  margin-bottom: 0.4rem;
+  font-weight: 500;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 15px;
+  background-color: #f0f2f0; /* Light gray from screenshot */
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s;
+  box-sizing: border-box; /* Ensures padding doesn't break width */
+}
+
+.input:focus {
+  outline: none;
+  background-color: #fff;
+  border-color: #2F5233;
+  box-shadow: 0 0 0 3px rgba(47, 82, 51, 0.1);
+}
+
+.primaryButton {
+  width: 100%;
+  padding: 12px;
+  background-color: #2F5233; /* The Agri Dark Green */
+  color: white;
+  border: none;
+  border-radius: 25px; /* Pill shape from screenshot */
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background 0.3s;
+}
+
+.primaryButton:hover {
+  background-color: #1e3621;
+}
+
+.footerText {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.link {
+  color: #2F5233;
+  font-weight: 600;
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+.link:hover {
+  text-decoration: underline;
+}

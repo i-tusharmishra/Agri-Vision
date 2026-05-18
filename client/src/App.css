@@ -1,0 +1,158 @@
+/* .App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
+/* GLOBAL RESETS */
+/* App.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* --- SIDEBAR ITEM STYLES --- */
+.nav-item {
+  padding: 12px;
+  border-radius: 10px;
+  color: #B0C4B1; /* Default Text Color */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease; /* Smooth transition */
+  background-color: transparent; /* Start transparent */
+}
+
+/* The Magic Hover Effect */
+.nav-item:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important; /* Glows White/Transparent */
+  transform: translateX(5px); /* Moves Right */
+  color: #FFFFFF !important; /* Text turns white */
+}
+
+/* Active Item Style (Current Page) */
+.nav-item.active {
+  background-color: #2F5233;
+  color: #FFFFFF;
+  font-weight: 600;
+  border-left: 4px solid #4CAF50;
+}
+
+/* --- LOGOUT BUTTON STYLES --- */
+.logout-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #3E2723; /* Default Dark Brown */
+  border: solid 2px #5D4037;
+  color: #FFAB91;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  gap: 8px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #5D4037 !important; /* Lighter Brown */
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  color: #FFFFFF;
+}
+
+/* --- LANGUAGE DROPDOWN HOVER --- */
+.lang-container {
+  position: relative;
+  background-color: #F5F5F5;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  border: 1px solid #E0E0E0;
+  flex: 1;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.lang-container:hover {
+  background-color: #FFFFFF !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* --- DASHBOARD CARD STYLES --- */
+.dashboard-card {
+  background: white;
+  border-radius: 16px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 220px;
+  border: 1px solid #ECEFF1;
+  /* Move base styles here so they can be animated */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease-in-out; /* Smooth movement */
+}
+
+/* HOVER EFFECT: Lift up + Sidebar-Colored Shadow */
+.dashboard-card:hover {
+  transform: translateY(-8px); /* Moves up */
+  box-shadow: 0 15px 30px rgba(26, 47, 35, 0.25) !important; /* The Sidebar Green Shadow */
+  border-color: rgba(26, 47, 35, 0.1);
+}
+
+/* Animate the Arrow inside */
+.card-arrow {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  align-self: flex-end;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.dashboard-card:hover .card-arrow {
+  transform: translateX(10px); /* Arrow moves right */
+}
