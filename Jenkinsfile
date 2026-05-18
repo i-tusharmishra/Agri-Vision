@@ -4,7 +4,6 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                // Pulls your latest code from GitHub
                 checkout scm
             }
         }
@@ -30,5 +29,4 @@ pipeline {
             echo 'Deployment failed. Check configurations.'
         }
     }
-}
 }
