@@ -30,7 +30,7 @@ const Signup = () => {
 
     try {
       // Send data to backend using Axios
-      const response = await axios.post('http://localhost:5000/api/user/signup', {
+      const response = await axios.post('http://13.50.224.214:5000/api/user/signup', {
         name: formData.name,
         email: formData.email,
         password: formData.password,
